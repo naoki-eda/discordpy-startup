@@ -3,7 +3,7 @@ import discord
 from discord.ext import tasks
 from datetime import datetime 
 
-TOKEN = "Nzc3ODg4MTEzNzg2NjE3OTA2.X7J-wg.glR-JPvFGnVSD83de5R9zbWpw8w" #トークン
+TOKEN = "Nzc3ODg4MTEzNzg2NjE3OTA2.X7J-wg.-wL1XP8s3eVPU0PWv3-ZebUELus" #トークン
 CHANNEL_ID = 687202041856000003 #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
@@ -13,7 +13,7 @@ client = discord.Client()
 async def loop():
     # 現在の時刻
     now = datetime.now().strftime('%H:%M')
-    if now == '00:':
+    if now == '00:28':
         channel = client.get_channel(CHANNEL_ID)
         await channel.send('てすと')  
 
