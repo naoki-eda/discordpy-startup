@@ -1,4 +1,5 @@
 #coding:UTF-8
+import os
 import discord
 from discord.ext import tasks
 from datetime import datetime 
@@ -13,7 +14,7 @@ client = discord.Client()
 async def loop():
     # 現在の時刻
     now = datetime.now().strftime('%H:%M')
-    if now == '01:14':
+    if now == '01:16':
         channel = client.get_channel(CHANNEL_ID)
         await channel.send('てすと')  
 
