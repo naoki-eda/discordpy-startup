@@ -3,7 +3,7 @@ import os,discord
 from discord.ext import tasks
 from datetime import datetime 
 
-TOKEN = os.os.environ["DISCORD_BOT_TOKEN"] #トークン
+TOKEN = os.environ["DISCORD_BOT_TOKEN"] #トークン
 CHANNEL_ID = os.environ.["CHANNEL_ID"] #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
