@@ -1,11 +1,10 @@
 #coding:UTF-8
-import os
-import discord
+import os,discord
 from discord.ext import tasks
 from datetime import datetime 
 
-TOKEN = os.environ.get("DISCORD_BOT_TOKEN") #トークン
-CHANNEL_ID = os.environ.get("CHANNEL_ID") #チャンネルID
+TOKEN = os.os.environ["DISCORD_BOT_TOKEN"] #トークン
+CHANNEL_ID = os.environ.["CHANNEL_ID"] #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
@@ -14,7 +13,7 @@ client = discord.Client()
 async def loop():
     # 現在の時刻
     now = datetime.now().strftime('%H:%M')
-    if now == '01:16':
+    if now == '01:25':
         channel = client.get_channel(CHANNEL_ID)
         await channel.send('てすと')  
 
