@@ -1,8 +1,6 @@
 #coding:UTF-8
 import os
 import discord
-import logging
-
 from discord.ext import tasks
 from datetime import datetime 
 
@@ -11,6 +9,8 @@ channel_id = os.environ['CHANNEL_ID'] #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
+await client.wait_until_ready()
+
 # 60秒に一回ループ
 @tasks.loop(seconds=60)
 async def loop():
@@ -18,8 +18,6 @@ async def loop():
     # now = datetime.now().strftime('%H:%M')
     # if now == '15:15':
         channel = client.get_channel(channel_id)
-        logging.info('info')
-        logging.info(channel)
         await channel.send('てすと')  
 
 #ループ処理実行
