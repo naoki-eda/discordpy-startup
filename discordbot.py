@@ -9,11 +9,11 @@ channel_id = os.environ['CHANNEL_ID'] #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
-await client.wait_until_ready()
 
-# 60秒に一回ループ
 @tasks.loop(seconds=60)
 async def loop():
+    await client.wait_until_ready()
+    # 60秒に一回ループ
     # 現在の時刻
     # now = datetime.now().strftime('%H:%M')
     # if now == '15:15':
