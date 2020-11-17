@@ -11,9 +11,10 @@ client = discord.Client()
 # 60秒に一回ループ
 @tasks.loop(seconds=60)
 async def loop():
+    await client.wait_until_ready()
     # 現在の時刻
-    now = datetime.now().strftime('%H:%M')
-    if now == '15:15':
+    # now = datetime.now().strftime('%H:%M')
+    # if now == '15:15':
         channel = client.get_channel(channel_id)
         await channel.send('てすと')  
 
