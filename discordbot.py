@@ -12,8 +12,8 @@ client = discord.Client()
 @tasks.loop(seconds=60)
 async def loop():
     # 現在の時刻
-#    now = datetime.now().strftime('%M')
-#    if now == '40':
+    now = datetime.now().strftime('%H:%M')
+    if now == '15:15':
         channel = client.get_channel(channel_id)
         await channel.send('てすと')  
 
