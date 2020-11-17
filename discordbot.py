@@ -1,5 +1,5 @@
 #coding:UTF-8
-import os,discord
+import os,discord,logging
 from discord.ext import tasks
 from datetime import datetime 
 
