@@ -9,11 +9,10 @@ channel_id = os.environ['CHANNEL_ID'] #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
-
 @tasks.loop(seconds=60)
 async def loop():
     await client.wait_until_ready()
-    await channel = client.get_channel(channel_id)
+    channel = client.get_channel(channel_id)
     await channel.send('てすと')  
 
 #ループ処理実行
