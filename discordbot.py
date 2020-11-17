@@ -13,7 +13,7 @@ client = discord.Client()
 @tasks.loop(seconds=60)
 async def loop():
     await client.wait_until_ready()
-    channel = client.get_channel(channel_id)
+    await channel = client.get_channel(channel_id)
     await channel.send('てすと')  
 
 #ループ処理実行
