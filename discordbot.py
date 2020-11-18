@@ -17,6 +17,7 @@ async def loop():
 #     await client.wait_until_ready()
     print(client.is_ready())
     channel = client.get_channel(channel_id)
+    print(channel)
     await channel.send('てすと')  
 
 #ループ処理実行
