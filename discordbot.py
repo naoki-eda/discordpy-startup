@@ -14,13 +14,14 @@ async def loop():
     print(datetime.now().strftime("%Y/%m/%d %H:%M:%S"), "start")
     print("token", token)
     print("channel_id", channel_id)
-    await client.wait_until_ready()
+#     await client.wait_until_ready()
     print(client.is_ready())
     channel = client.get_channel(channel_id)
     await channel.send('てすと')  
 
 #ループ処理実行
-loop.start()
+async def on_ready():
+    loop.start()
 
 # Botの起動とDiscordサーバーへの接続
 client.run(token)
