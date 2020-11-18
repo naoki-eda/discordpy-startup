@@ -22,6 +22,9 @@ async def loop():
 
 @client.event
 async def on_ready():
+    channel = client.get_channel(channel_id)
+    print(channel)
+    await channel.send('てすと')  
     #ループ処理実行
     loop.start()
 
