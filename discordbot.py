@@ -11,7 +11,7 @@ client = discord.Client()
 
 @tasks.loop(seconds=60)
 async def loop():
-    print(datetime.now().strftime("%Y/%m/%d %H:%M:%S"), "start", func.__name__)
+    print(datetime.now().strftime("%Y/%m/%d %H:%M:%S"), "start")
     await client.wait_until_ready()
     channel = client.get_channel(channel_id)
     await channel.send('てすと')  
