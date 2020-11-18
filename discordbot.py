@@ -20,9 +20,9 @@ async def loop():
     print(channel)
     await channel.send('てすと')  
 
-@client.event
 async def on_ready():
     #ループ処理実行
     loop.start()
-    # Botの起動とDiscordサーバーへの接続
-    client.run(token)
+
+# Botの起動とDiscordサーバーへの接続
+client.run(token)
